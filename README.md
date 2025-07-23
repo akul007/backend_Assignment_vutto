@@ -3,7 +3,6 @@
 
 ## ✅ **2. Backend: `backend/README.md`**
 
-```markdown
 # Vutto - Backend
 
 This is the backend server for **Vutto**, a second-hand bike marketplace built with **Node.js**, **Express**, and **MongoDB**.
