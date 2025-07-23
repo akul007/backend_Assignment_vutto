@@ -27,10 +27,9 @@ It provides RESTful APIs for authentication and bike listing operations.
    ```bash
    cd backend
 
-## Install dependencies:
-
-
+Install dependencies:
 npm install
+
 Configure environment variables
 
 Create a .env file and add:
@@ -38,11 +37,8 @@ Create a .env file and add:
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/vutto
 JWT_SECRET=your_super_secret_key
-Start the server:
 
-bash
-Copy
-Edit
+Start the server:
 npm run dev
 The server will run on http://localhost:5000
 
@@ -58,6 +54,8 @@ backend/
 ├── .env               # Environment variables
 ├── server.js          # Entry point
 └── package.json
+
+
 📌 Available API Routes
 🔐 Auth Routes
 Method	Endpoint	Description
@@ -78,11 +76,11 @@ After login/register, a JWT is returned.
 
 Include it in headers for protected routes:
 
-makefile
-Copy
-Edit
 Authorization: Bearer <token>
+
+
 🧪 Sample Test (Postman)
+
 Register a new user.
 
 Log in and copy the JWT token.
