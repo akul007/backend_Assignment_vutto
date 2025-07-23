@@ -23,6 +23,75 @@ It provides RESTful APIs for authentication and bike listing operations.
 
 ## 🛠️ Setup Instructions
 
-1. **Navigate to the backend folder**:
+**Navigate to the backend folder**:
    ```bash
    cd backend
+
+Install dependencies:
+
+```bash
+npm install
+Configure environment variables
+
+Create a .env file and add:
+
+env
+Copy
+Edit
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/vutto
+JWT_SECRET=your_super_secret_key
+Start the server:
+
+bash
+Copy
+Edit
+npm run dev
+The server will run on http://localhost:5000
+
+📁 Folder Structure
+bash
+Copy
+Edit
+backend/
+├── controllers/       # Logic for users and bikes
+├── middleware/        # Auth middleware (JWT)
+├── models/            # Mongoose schemas (User, Bike)
+├── routes/            # Express routers
+├── .env               # Environment variables
+├── server.js          # Entry point
+└── package.json
+📌 Available API Routes
+🔐 Auth Routes
+Method	Endpoint	Description
+POST	/auth/register	Register a user
+POST	/auth/login	Login & get token
+
+🛵 Bike Routes
+Method	Endpoint	Description
+GET	/bikes	Get all bikes (optionally filtered)
+GET	/bikes/:id	Get single bike by ID
+GET	/bikes/user	Get bikes listed by logged-in user
+POST	/bikes	Add a new bike (auth required)
+PUT	/bikes/:id	Edit a bike (auth + ownership)
+DELETE	/bikes/:id	Delete a bike (auth + ownership)
+
+🔐 JWT Auth Flow
+After login/register, a JWT is returned.
+
+Include it in headers for protected routes:
+
+makefile
+Copy
+Edit
+Authorization: Bearer <token>
+🧪 Sample Test (Postman)
+Register a new user.
+
+Log in and copy the JWT token.
+
+Use token to create a new bike listing.
+
+Get and delete bikes using the correct endpoints.
+
+
