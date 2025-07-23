@@ -27,17 +27,14 @@ It provides RESTful APIs for authentication and bike listing operations.
    ```bash
    cd backend
 
-Install dependencies:
+## Install dependencies:
 
-```bash
+
 npm install
 Configure environment variables
 
 Create a .env file and add:
 
-env
-Copy
-Edit
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/vutto
 JWT_SECRET=your_super_secret_key
